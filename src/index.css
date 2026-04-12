@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Orienta&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+  --font-orienta: "Orienta", sans-serif;
+  
+  --color-portfolio-gold: #D4A017;
+  --color-portfolio-gray: #F9F9F9;
+  --color-portfolio-beige: #F5EFE6;
+  --color-portfolio-red: #E55B4D;
+  --color-portfolio-dark: #333333;
+  --color-nav-underline: #EED285;
+}
+
+@layer utilities {
+  .layout-container {
+    @apply max-w-[1238px] mx-auto px-6 grid grid-cols-12 gap-x-20;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-white text-portfolio-dark font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4 {
+    @apply font-serif;
+  }
+}
+
+
