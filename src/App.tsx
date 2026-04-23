@@ -42,7 +42,7 @@ function Home() {
 
 export default function App() {
   return (
-    <Router>
+    <Router basename="/ali-felski-design-/">
       <ScrollToTop />
       <div className="min-h-screen">
         <Navbar />
