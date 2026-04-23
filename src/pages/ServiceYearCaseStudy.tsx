@@ -42,6 +42,7 @@ export default function ServiceYearCaseStudy() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2, duration: 1 }}
               className="col-span-12 lg:col-span-6 min-[736px]:col-span-6 relative mt-0"
+              style="height:450px"
             >
               <div className="shadow-lg md:shadow-2xl overflow-hidden min-[736px]:w-full lg:w-full aspect-video">
                 <img 
