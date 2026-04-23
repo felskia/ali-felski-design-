@@ -6,27 +6,61 @@
   --font-serif: "Playfair Display", serif;
   --font-orienta: "Orienta", sans-serif;
   
+  --breakpoint-xs: 480px;
+  
   --color-portfolio-gold: #D4A017;
-  --color-portfolio-gray: #F9F9F9;
+  --color-portfolio-gray: #F7F6F6;
   --color-portfolio-beige: #F5EFE6;
   --color-portfolio-red: #E55B4D;
   --color-portfolio-dark: #333333;
   --color-nav-underline: #EED285;
+  --color-divider: #DCD6D6;
 }
 
 @layer utilities {
   .layout-container {
-    @apply max-w-[1238px] mx-auto px-6 grid grid-cols-12 gap-x-20;
+    @apply w-full max-w-[1240px] mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-12 md:gap-x-8 lg:gap-x-12 xl:gap-x-20;
   }
 }
 
 @layer base {
+  img {
+    @apply max-w-full h-auto block;
+  }
+  
   body {
-    @apply bg-white text-portfolio-dark font-sans antialiased;
+    @apply bg-white text-portfolio-dark font-sans antialiased overflow-x-hidden;
   }
   
   h1, h2, h3, h4 {
     @apply font-serif;
+  }
+}
+
+.my-masonry-grid {
+  display: flex;
+  margin-left: -28px; /* gutter size offset */
+  width: auto;
+}
+.my-masonry-grid_column {
+  padding-left: 28px; /* gutter size */
+  background-clip: padding-box;
+}
+
+/* Style your items */
+.my-masonry-grid_column > * {
+  margin-bottom: 28px;
+}
+
+@media (min-width: 768px) {
+  .my-masonry-grid {
+    margin-left: -28px;
+  }
+  .my-masonry-grid_column {
+    padding-left: 28px;
+  }
+  .my-masonry-grid_column > * {
+    margin-bottom: 28px;
   }
 }
 

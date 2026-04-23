@@ -17,6 +17,9 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import MarianaTekCaseStudy from "./pages/MarianaTekCaseStudy";
 import BrandMergeCaseStudy from "./pages/BrandMergeCaseStudy";
+import ServiceYearCaseStudy from "./pages/ServiceYearCaseStudy";
+import PresidentialCaseStudy from "./pages/PresidentialCaseStudy";
+import MarianaTekAppCaseStudy from "./pages/MarianaTekAppCaseStudy";
 import Footer from "./components/Footer";
 
 function ScrollToTop() {
@@ -32,7 +35,6 @@ function Home() {
     <>
       <Hero />
       <Projects />
-      <AboutComponent />
       <ContactComponent />
     </>
   );
@@ -54,6 +56,9 @@ export default function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/portfolio/mariana-tek" element={<MarianaTekCaseStudy />} />
             <Route path="/portfolio/brand-merge" element={<BrandMergeCaseStudy />} />
+            <Route path="/portfolio/service-year" element={<ServiceYearCaseStudy />} />
+            <Route path="/portfolio/presidential-election" element={<PresidentialCaseStudy />} />
+            <Route path="/portfolio/mariana-tek-app" element={<MarianaTekAppCaseStudy />} />
           </Routes>
         </main>
         <Footer />

@@ -18,13 +18,6 @@ async function startServer() {
   app.get("/api/projects", (req, res) => {
     const projects = [
       {
-        id: 1,
-        title: "Mariana Tek Redesign",
-        description: "Rebrand across mobile, web and mobile to improve usability and consistency.",
-        type: "case-study",
-        image: "/portfolio-cards/project-MT-site.png"
-      },
-      {
         id: 2,
         title: "Brand Merge",
         description: "Merging of BILL and Divvy brands to build one financially back-end solution.",
@@ -32,10 +25,17 @@ async function startServer() {
         image: "/BILL-casestudy2.png"
       },
       {
+        id: 1,
+        title: "Mariana Tek Redesign",
+        description: "Usability and design overhaul across mobile, web and tablet.",
+        type: "case-study",
+        image: "/WI-cropped.png"
+      },
+      {
         id: 3,
-        title: "The Ultimate Business Management Software",
+        title: "Mariana Tek Marketing",
         type: "other",
-        image: "https://picsum.photos/seed/business/800/1000"
+        image: "/portfolio-cards/project-MT-site.png"
       },
       {
         id: 4,
@@ -45,7 +45,7 @@ async function startServer() {
       },
       {
         id: 5,
-        title: "Live Results: Presidential Election",
+        title: "Election Results",
         type: "other",
         image: "/portfolio-cards/WAPO-map-card.png"
       }
@@ -55,7 +55,11 @@ async function startServer() {
 
   app.post("/api/contact", express.json(), async (req, res) => {
     const { name, email, message } = req.body;
-    console.log(`Contact form submission:`, { name, email, message });
+    console.log(`Contact form submission received:`, { name, email, message });
+
+    if (!name || !email || !message) {
+      return res.status(400).json({ success: false, error: "Missing required fields (name, email, or message)" });
+    }
 
     if (!resend) {
       console.warn("RESEND_API_KEY is not set. Email will not be sent.");
@@ -63,27 +67,38 @@ async function startServer() {
     }
 
     try {
+      // Resend validation error often occurs if 'from' or 'to' is invalid
+      // For the free tier/onboarding domain, 'to' MUST be the email you signed up with.
       const { data, error } = await resend.emails.send({
-        from: "Portfolio Contact Form <onboarding@resend.dev>",
+        from: "onboarding@resend.dev",
         to: ["alifelski@gmail.com"],
-        subject: `New Contact Form Submission from ${name}`,
+        subject: `Portfolio Contact: ${name}`,
         html: `
-          <h1>New Contact Form Submission</h1>
-          <p><strong>Name:</strong> ${name}</p>
-          <p><strong>Email:</strong> ${email}</p>
-          <p><strong>Message:</strong></p>
-          <p>${message}</p>
+          <div style="font-family: sans-serif; line-height: 1.5;">
+            <h2>New Contact Form Submission</h2>
+            <p><strong>From:</strong> ${name} (${email})</p>
+            <p><strong>Message:</strong></p>
+            <div style="background: #f4f4f4; padding: 15px; border-left: 4px solid #333;">
+              ${message.replace(/\n/g, '<br>')}
+            </div>
+          </div>
         `,
       });
 
       if (error) {
-        console.error("Resend error:", error);
-        return res.status(500).json({ success: false, error: error.message });
+        // Log the full error object to help debug validation issues
+        console.error("Resend Error Details:", JSON.stringify(error, null, 2));
+        return res.status(400).json({ 
+          success: false, 
+          error: error.message || "Validation Error", 
+          code: error.name 
+        });
       }
 
+      console.log("Email sent successfully:", data);
       res.json({ success: true, data });
     } catch (err) {
-      console.error("Server error:", err);
+      console.error("Unexpected Server Error:", err);
       res.status(500).json({ success: false, error: "Internal server error" });
     }
   });
