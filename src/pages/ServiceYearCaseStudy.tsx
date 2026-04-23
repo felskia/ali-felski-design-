@@ -43,7 +43,7 @@ export default function ServiceYearCaseStudy() {
               transition={{ delay: 0.2, duration: 1 }}
               className="col-span-12 lg:col-span-6 min-[736px]:col-span-6 relative mt-0"
             >
-              <div className=" overflow-hidden min-[736px]:w-full lg:w-full aspect-video" style="height:450px width:100%">
+              <div className=" overflow-hidden min-[736px]:w-full lg:w-full aspect-video" style="height:450px; width:100%;">
                 <img 
                    src="/portfolio-cards/project-service-year.png" 
                    alt="Service Year Project" 
