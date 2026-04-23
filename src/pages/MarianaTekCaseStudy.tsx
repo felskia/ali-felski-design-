@@ -230,7 +230,7 @@ export default function MarianaTekCaseStudy() {
               viewport={{ once: true }}
             >
               <img 
-                src="/WI-cropped.png" 
+                src="/portfolio-cards/MT-final.png" 
                 alt="Final Mariana Tek Product" 
                 className="w-full h-auto drop-shadow-2xl mx-auto"
                 referrerPolicy="no-referrer"
