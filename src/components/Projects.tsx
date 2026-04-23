@@ -18,7 +18,7 @@ export default function Projects() {
   const isPortfolioPage = location.pathname === "/portfolio";
 
   useEffect(() => {
-    fetch("/api/projects")
+    fetch("./api/projects.json")
       .then((res) => res.json())
       .then((data) => {
         // Ensure "otherWork" is in the desired order for masonry (L to R)
