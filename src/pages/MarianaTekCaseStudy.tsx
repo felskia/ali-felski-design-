@@ -12,7 +12,7 @@ export default function MarianaTekCaseStudy() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="col-span-12 lg:col-span-6 min-[736px]:col-span-6 pb-[65px] md:pb-[65px] z-10 mt-8 sm:mt-12 lg:mt-0"
+              className="col-span-12 lg:col-span-5 min-[736px]:col-span-6 pb-[65px] md:pb-[65px] z-10 mt-8 sm:mt-12 lg:mt-0"
             >
               <h1 className="text-[32px] sm:text-[42px] md:text-[54px] lg:text-[68px] font-bold text-white leading-[1.05] tracking-tight mb-2 font-serif">
                 Mariana Tek Redesign
@@ -41,7 +41,7 @@ export default function MarianaTekCaseStudy() {
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2, duration: 1 }}
-              className="col-span-12 lg:col-span-6 min-[736px]:col-span-6 relative mt-0"
+              className="col-span-12 lg:col-span-7 min-[736px]:col-span-6 relative mt-0"
             >
               <div className="shadow-lg md:shadow-2xl overflow-hidden min-[736px]:w-full lg:w-full aspect-video">
                 <img 
@@ -223,6 +223,11 @@ export default function MarianaTekCaseStudy() {
       {/* Final Statement Section */}
       <section className="py-24 bg-white overflow-hidden border-b border-divider">
         <div className="layout-container items-center gap-12">
+          <div className="col-span-12 lg:col-span-5 lg:col-start-8 text-center lg:text-left">
+            <h2 className="text-2xl md:text-[34px] leading-relaxed text-portfolio-dark font-serif italic font-normal">
+              By bringing in process, collaboration methods and great UX, I built a system that not only worked for our customers but made them successful.
+            </h2>
+          </div>
           <div className="col-span-12 lg:col-span-6 mb-12 lg:mb-0">
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
@@ -232,15 +237,10 @@ export default function MarianaTekCaseStudy() {
               <img 
                 src="/portfolio-cards/MT-final.png" 
                 alt="Final Mariana Tek Product" 
-                className="w-full h-auto drop-shadow-2xl mx-auto"
+                className="w-full h-auto mx-auto"
                 referrerPolicy="no-referrer"
               />
             </motion.div>
-          </div>
-          <div className="col-span-12 lg:col-span-5 lg:col-start-8 text-center lg:text-left">
-            <h2 className="text-2xl md:text-[34px] leading-relaxed text-portfolio-dark font-serif italic font-normal">
-              By bringing in process, collaboration methods and great UX, I built a system that not only worked for our customers but made them successful.
-            </h2>
           </div>
         </div>
       </section>
