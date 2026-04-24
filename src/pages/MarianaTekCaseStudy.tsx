@@ -49,7 +49,7 @@ export default function MarianaTekCaseStudy() {
                   alt="Mariana Tek Interface" 
                   className="w-full h-full object-cover object-top shadow-lg md:shadow-2xl"
                   referrerPolicy="no-referrer"
-                  style={{ scale 1.2 }}
+                  style={{ scale: 1.2 }}
                 />
               </div>
             </motion.div>
