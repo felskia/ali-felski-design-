@@ -51,7 +51,7 @@ export default function MarianaTekCaseStudy() {
               transition={{ delay: 0.2, duration: 1 }}
               className="col-span-12 lg:col-span-6 min-[736px]:col-span-10 relative mt-0"
             >
-              <div className="shadow-lg md:shadow-2xl overflow-hidden min-[736px]:w-full lg:w-full" style={{ width: windowWidth >= 735 ? '110%' : '100%' }}>
+              <div className="shadow-lg md:shadow-2xl overflow-hidden min-[736px]:w-full lg:w-full" style={{ width: windowWidth >= 735 ? '115%' : '100%' }}>
                 <img 
                   src="/portfolio-cards/Reserve_24.png" 
                   alt="Mariana Tek Interface" 
