@@ -223,7 +223,7 @@ export default function MarianaTekCaseStudy() {
       {/* Final Statement Section */}
       <section className="py-24 bg-white overflow-hidden border-b border-divider">
         <div className="layout-container items-center col-span-12">
-          <div className="col-span-12 grid grid-cols-1 md:grid-cols-2 gap-x-12 lg:gap-x-20 gap-y-8 mb-16 lg:text-left">
+          <div className="col-span-12 grid grid-cols-2 md:grid-cols-2 gap-x-12 lg:gap-x-20 gap-y-8 mb-16 lg:text-left">
             <h2 className="text-2xl md:text-[34px] leading-relaxed text-portfolio-dark font-serif italic font-normal">
               By bringing in process, collaboration methods and great UX, I built a system that not only worked for our customers but made them successful.
             </h2>
