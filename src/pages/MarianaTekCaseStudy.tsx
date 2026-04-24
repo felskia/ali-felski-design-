@@ -41,9 +41,9 @@ export default function MarianaTekCaseStudy() {
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2, duration: 1 }}
-              className="col-span-12 lg:col-span-5 min-[736px]:col-span-6 relative mt-0"
+              className="col-span-12 lg:col-span-6 min-[736px]:col-span-6 relative mt-0"
             >
-              <div style={{ height: "450px", width: "100%" }} className="overflow-hidden min-[736px]:w-full lg:w-full aspect-video">
+              <div className="shadow-lg md:shadow-2xl overflow-hidden min-[736px]:w-full lg:w-full">
                 <img 
                   src="/portfolio-cards/Reserve_24.png" 
                   alt="Mariana Tek Interface" 
