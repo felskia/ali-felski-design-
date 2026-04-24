@@ -41,7 +41,7 @@ export default function MarianaTekCaseStudy() {
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2, duration: 1 }}
-              className="col-span-12 lg:col-span-6 min-[736px]:col-span-6 relative mt-0"
+              className="col-span-12 lg:col-span-6 min-[736px]:col-span-9 relative mt-0"
             >
               <div className="shadow-lg md:shadow-2xl overflow-hidden min-[736px]:w-full lg:w-full">
                 <img 
@@ -49,7 +49,7 @@ export default function MarianaTekCaseStudy() {
                   alt="Mariana Tek Interface" 
                   className="w-full h-full object-cover object-top shadow-lg md:shadow-2xl origin-top-left"
                   referrerPolicy="no-referrer"
-                  style={{ scale: 1.2 }}
+                  style={{ scale: 1.4, width: window.innerWidth >= 735 ? '120%' : '100%' }}
                 />
               </div>
             </motion.div>
