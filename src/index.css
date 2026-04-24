@@ -7,6 +7,7 @@
   --font-orienta: "Orienta", sans-serif;
   
   --breakpoint-xs: 480px;
+  --breakpoint-custom-bp: 850px;
   
   --color-portfolio-gold: #D4A017;
   --color-portfolio-gray: #F7F6F6;
