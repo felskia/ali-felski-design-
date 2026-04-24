@@ -223,25 +223,33 @@ export default function MarianaTekCaseStudy() {
 
       {/* Final Statement Section */}
       <section className="py-24 bg-white overflow-hidden border-b border-divider">
-        <div className="layout-container items-center col-span-12">
-          <div className="col-span-12 grid grid-cols-2 md:grid-cols-2 gap-x-12 lg:gap-x-20 gap-y-8 mb-16 lg:text-left">
-            <h2 className="text-2xl md:text-[34px] leading-relaxed text-portfolio-dark font-serif italic font-normal">
-              By bringing in process, collaboration methods and great UX, I built a system that not only worked for our customers but made them successful.
-            </h2>
-          </div>
-          <div>
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-            >
-              <img 
-                src="/portfolio-cards/MT-final.png" 
-                alt="Final Mariana Tek Product" 
-                className="w-full h-auto mx-auto"
-                referrerPolicy="no-referrer"
-              />
-            </motion.div>
+        <div className="layout-container">
+          <div className="grid grid-cols-12 gap-x-12 lg:gap-x-20 items-center">
+            
+            {/* Text - 5 columns on large, full width on mobile */}
+            <div className="col-span-12 custom-bp:col-span-5 mb-8 custom-bp:mb-0">
+              <h2 className="text-2xl md:text-[34px] leading-relaxed text-portfolio-dark font-serif italic font-normal">
+                By bringing in process, collaboration methods and great UX, I built a system that not only worked for our customers but made them successful.
+              </h2>
+            </div>
+      
+            {/* Image - 7 columns on large, full width on mobile */}
+            <div className="col-span-12 custom-bp:col-span-7 flex justify-center">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                className="w-full"
+              >
+                <img
+                  src="/portfolio-cards/MT-final.png"
+                  alt="Final Mariana Tek Product"
+                  className="w-full h-auto mx-auto"
+                  referrerPolicy="no-referrer"
+                />
+              </motion.div>
+            </div>
+      
           </div>
         </div>
       </section>
