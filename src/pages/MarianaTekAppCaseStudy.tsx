@@ -47,7 +47,7 @@ export default function MarianaTekAppCaseStudy() {
                 <img 
                   src="/portfolio-cards/project-MT-site.png" 
                   alt="Mariana Tek Business Management" 
-                  className="w-full h-full object-cover object-left-top scale-[1.1] -translate-x-6 origin-top-left shadow-lg md:shadow-2xl"
+                  className="w-full h-full object-cover object-top shadow-lg md:shadow-2xl"
                   referrerPolicy="no-referrer"
                 />
               </div>
