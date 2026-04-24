@@ -41,13 +41,13 @@ export default function MarianaTekAppCaseStudy() {
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2, duration: 1 }}
-              className="col-span-12 lg:col-span-6 min-[736px]:col-span-6 relative mt-0"
+              className="col-span-12 lg:col-span-5 min-[736px]:col-span-6 relative mt-0"
             >
-              <div className="shadow-lg md:shadow-2xl overflow-hidden min-[736px]:w-full lg:w-full aspect-video">
+              <div style={{ height: "450px", width: "100%" }} className="overflow-hidden min-[736px]:w-full lg:w-full aspect-video">
                 <img 
                   src="/portfolio-cards/project-MT-site.png" 
                   alt="Mariana Tek Business Management" 
-                  className="w-full h-full object-cover object-left-top scale-[1.1] -translate-x-6 origin-top-left"
+                  className="w-full h-full object-cover object-left-top scale-[1.1] -translate-x-6 origin-top-left shadow-lg md:shadow-2xl"
                   referrerPolicy="no-referrer"
                 />
               </div>
