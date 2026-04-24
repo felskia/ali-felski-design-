@@ -232,7 +232,7 @@ export default function MarianaTekCaseStudy() {
       {/* Final Statement Section */}
       <section className="py-24 bg-white overflow-hidden border-b border-divider">
         <div className="layout-container">
-          <div className="grid grid-cols-12 gap-x-12 lg:gap-x-20 items-center">
+          <div className="col-span-12 grid grid-cols-1 md:grid-cols-12 md:gap-x-12 md:items-start lg:items-center">
             
             {/* Text - 5 columns on large, full width on mobile */}
             <div className="col-span-12 lg:col-span-5 custom-bp:col-span-5 mb-8 custom-bp:mb-0">
