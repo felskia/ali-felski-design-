@@ -1,5 +1,12 @@
 import express from "express";
-import { createServer as createViteServer } from "vite";
+if (process.env.NODE_ENV !== "production") {
+    const { createServer: createViteServer } = await import("vite");
+    const vite = await createViteServer({
+      server: { middlewareMode: true },
+      appType: "spa",
+    });
+    app.use(vite.middlewares);
+  } else {
 import path from "path";
 import { fileURLToPath } from "url";
 
@@ -8,7 +15,6 @@ const __dirname = path.dirname(__filename);
 
 import { Resend } from "resend";
 import cors from "cors";
-import { createServer as createViteServer } from "vite";
 
 const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
 
