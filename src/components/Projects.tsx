@@ -90,6 +90,7 @@ export default function Projects() {
                             : 'object-cover group-hover:scale-105'
                         }`}
                         referrerPolicy="no-referrer"
+                        style={{ scale: 1.2 }}
                       />
                     </div>
                   </Link>
