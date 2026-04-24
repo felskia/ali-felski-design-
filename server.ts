@@ -13,6 +13,9 @@ const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KE
 
 async function startServer() {
   const app = express();
+  app.use(cors({
+    origin: "https://felskia.github.io"
+  }));
   const PORT = 3000;
 
   // API routes
