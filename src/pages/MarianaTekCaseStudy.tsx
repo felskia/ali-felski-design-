@@ -47,7 +47,7 @@ export default function MarianaTekCaseStudy() {
                 <img 
                   src="/portfolio-cards/Reserve_24.png" 
                   alt="Mariana Tek Interface" 
-                  className="w-full h-full object-cover object-top shadow-lg md:shadow-2xl"
+                  className="w-full h-full object-cover object-top shadow-lg md:shadow-2xl origin-top-left"
                   referrerPolicy="no-referrer"
                   style={{ scale: 1.2 }}
                 />
