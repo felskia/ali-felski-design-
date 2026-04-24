@@ -19,7 +19,7 @@ export default function Contact() {
     };
 
     try {
-      const response = await fetch("https://your-render-app.onrender.com/api/contact", {
+      const response = await fetch("https://ali-felski-design.onrender.com/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
