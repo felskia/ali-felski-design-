@@ -8,6 +8,7 @@ const __dirname = path.dirname(__filename);
 
 import { Resend } from "resend";
 import cors from "cors";
+import { createServer as createViteServer } from "vite";
 
 const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
 
