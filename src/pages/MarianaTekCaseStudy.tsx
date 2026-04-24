@@ -1,7 +1,15 @@
 import { motion } from "motion/react";
 import { Link } from "react-router-dom";
+import { useState, useEffect } from 'react';
 
 export default function MarianaTekCaseStudy() {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
       {/* Hero Section */}
@@ -43,13 +51,13 @@ export default function MarianaTekCaseStudy() {
               transition={{ delay: 0.2, duration: 1 }}
               className="col-span-12 lg:col-span-6 min-[736px]:col-span-9 relative mt-0"
             >
-              <div className="shadow-lg md:shadow-2xl overflow-hidden min-[736px]:w-full lg:w-full">
+              <div className="shadow-lg md:shadow-2xl overflow-hidden min-[736px]:w-full lg:w-full" style={{ width: windowWidth >= 735 ? '110%' : '100%' }}>
                 <img 
                   src="/portfolio-cards/Reserve_24.png" 
                   alt="Mariana Tek Interface" 
                   className="w-full h-full object-cover object-top shadow-lg md:shadow-2xl origin-top-left"
                   referrerPolicy="no-referrer"
-                  style={{ scale: 1.4, width: window.innerWidth >= 735 ? '120%' : '100%' }}
+                  style={{ scale: 1.4 }}
                 />
               </div>
             </motion.div>
@@ -227,14 +235,14 @@ export default function MarianaTekCaseStudy() {
           <div className="grid grid-cols-12 gap-x-12 lg:gap-x-20 items-center">
             
             {/* Text - 5 columns on large, full width on mobile */}
-            <div className="col-span-12 custom-bp:col-span-5 mb-8 custom-bp:mb-0">
+            <div className="col-span-12 lg:col-span-5 custom-bp:col-span-5 mb-8 custom-bp:mb-0">
               <h2 className="text-2xl md:text-[34px] leading-relaxed text-portfolio-dark font-serif italic font-normal">
                 By bringing in process, collaboration methods and great UX, I built a system that not only worked for our customers but made them successful.
               </h2>
             </div>
       
             {/* Image - 7 columns on large, full width on mobile */}
-            <div className="col-span-12 custom-bp:col-span-7 flex justify-center">
+            <div className="col-span-12 lg:col-span-6 custom-bp:col-span-7 flex justify-center">
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -246,6 +254,7 @@ export default function MarianaTekCaseStudy() {
                   alt="Final Mariana Tek Product"
                   className="w-full h-auto mx-auto"
                   referrerPolicy="no-referrer"
+                  style={{ width: windowWidth >= 735 ? '120%' : '100%' }}
                 />
               </motion.div>
             </div>
