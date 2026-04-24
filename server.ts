@@ -70,9 +70,9 @@ async function startServer() {
       // Resend validation error often occurs if 'from' or 'to' is invalid
       // For the free tier/onboarding domain, 'to' MUST be the email you signed up with.
       const { data, error } = await resend.emails.send({
-        from: "onboarding@resend.dev",
+        from: "contact@alifelskidesign.com",
         to: ["alifelski@gmail.com"],
-        subject: `Portfolio Contact: ${name}`,
+        subject: `I'd love more information: ${name}`,
         html: `
           <div style="font-family: sans-serif; line-height: 1.5;">
             <h2>New Contact Form Submission</h2>
