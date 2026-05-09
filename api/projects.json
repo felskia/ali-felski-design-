@@ -1,0 +1,34 @@
+[
+  {
+    "id": 2,
+    "title": "Brand Merge",
+    "description": "Merging of BILL and Divvy brands to build one financially back-end solution.",
+    "type": "case-study",
+    "image": "/BILL-casestudy2.png"
+  },
+  {
+    "id": 1,
+    "title": "Mariana Tek Redesign",
+    "description": "Usability and design overhaul across mobile, web and tablet.",
+    "type": "case-study",
+    "image": "/WI-cropped.png"
+  },
+  {
+    "id": 3,
+    "title": "Mariana Tek Marketing",
+    "type": "other",
+    "image": "/portfolio-cards/project-MT-site.png"
+  },
+  {
+    "id": 4,
+    "title": "A Year of Service, a Lifetime of Difference",
+    "type": "other",
+    "image": "/portfolio-cards/project-service-year.png"
+  },
+  {
+    "id": 5,
+    "title": "Election Results",
+    "type": "other",
+    "image": "/portfolio-cards/WAPO-map-card.png"
+  }
+]
